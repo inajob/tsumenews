@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Tsume News</title>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, dialog, figure, footer, header,
+  hgroup, menu, nav, section { display: block; }
+</style>
+<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/handlebars-v1.3.0.js"></script>
+<script src="js/tsumenews.js"></script>
+</head>
+<body>
+<script src="http://inajob.dip.jp/dev/mh/mh.js"></script>
+<div class="col1" id="col1-1"> </div>
+
+<div class="col2" id="col2-1"> </div>
+<div class="col2" id="col2-2"> </div>
+
+<div class="col6" id="col6-1"> </div>
+<div class="col6" id="col6-2"> </div>
+<div class="col6" id="col6-3"> </div>
+<div class="col6" id="col6-4"> </div>
+<div class="col6" id="col6-5"> </div>
+<div class="col6" id="col6-6"> </div>
+
+<div class="col3" id="col3-1"> </div>
+<div class="col3" id="col3-2"> </div>
+<div class="col3" id="col3-3"> </div>
+
+<div class="col4" id="col4-1"> </div>
+<div class="col4" id="col4-2"> </div>
+<div class="col4" id="col4-3"> </div>
+<div class="col4" id="col4-4"> </div>
+
+
+
+
+<div>
+  <script type="text/template" id="plusFrameTemplate">
+    <div class="plusFrame">+</div>
+  </script>
+  <script type="text/template" id="frameTemplate">
+    <div class="frame cf">
+      <!--
+      <div class="control tar">
+        <span class="button">[S]</span>
+        <span class="button">[D]</span>
+      </div>
+      -->
+      <div class="contents"></div>
+    </div>
+  </script>
+  <script type="text/template" id="itemTemplateGoogle">
+    <a href="{{link}}"><h2>{{title}}</h2></a>
+    {{#entries}}
+    <div class="piece">
+      <div class="inner cf">
+        <!--<div class="rfloat">{{#extract content}}{{/extract}}</div>-->
+        <div class="lfloat">
+          <a href="{{link}}"><img class="favicon" src="http://cdn-ak.favicon.st-hatena.com/?url={{link}}"></a>
+        </div>
+        <div class="bm"><a href="http://b.hatena.ne.jp/entry/{{link}}"><img src="http://b.hatena.ne.jp/entry/image/small/{{link}}"></a></div>
+        <div class="title">
+          <a href="{{link}}">{{title}}</a>
+          <!--<a href="http://b.hatena.ne.jp/entry/{{link}}"><img src="http://b.hatena.ne.jp/entry/image/small/{{link}}"></a>-->
+        </div>
+        <!--<div class="tar rfloat">{{#showDate publishedDate}}{{/showDate}}</div>-->
+        <!--<div>{{description}}</div>-->
+      </div>
+    </div>
+    {{/entries}}
+  </script>
+
+  <script type="text/template" id="itemTemplate">
+    <a href="{{link}}"><h2>{{title}}</h2></a>
+    {{#item}}
+    <div class="piece">
+      <div class="inner cf">
+        <!--<div class="rfloat">{{#extract content}}{{/extract}}</div>-->
+        <div class="lfloat">
+          <a href="{{link}}"><img class="favicon" src="http://cdn-ak.favicon.st-hatena.com/?url={{link}}"></a>
+        </div>
+        <div class="bm"><a href="http://b.hatena.ne.jp/entry/{{link}}"><img src="http://b.hatena.ne.jp/entry/image/small/{{link}}"></a></div>
+        <div class="title">
+          <a href="{{link}}">{{title}}</a>
+          <!--<a href="http://b.hatena.ne.jp/entry/{{link}}"><img src="http://b.hatena.ne.jp/entry/image/small/{{link}}"></a>-->
+        </div>
+        <!--<div class="tar rfloat">{{#showDate publishedDate}}{{/showDate}}</div>-->
+        <!--<div>{{description}}</div>-->
+      </div>
+    </div>
+    {{/item}}
+  </script>
+</div>
+
+<div id="feed"></div>
+</body>
+</html>

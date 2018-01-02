@@ -1,0 +1,177 @@
+
+@font-face {
+  font-family: 'MisakiGothic';
+  src: url('misaki_gothic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'PixelMplus10-Regular';
+  src: url('PixelMplus10-Regular.ttf') format('truetype');
+}
+
+
+*{
+  margin:0px;
+  padding:0px;
+}
+
+
+body{
+  background-color:#aaa;
+}
+a{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:underline;
+  color:red;
+}
+
+h1.title{
+  color:#336;
+  font-size:12px;
+  text-align:center;
+}
+
+.piece .inner{
+
+  border:solid #336;
+  border-width:1px 1px 1px 3px;
+
+  height:100%;
+  padding:2px;
+
+  padding-top:0px;
+  margin-top:1px;
+  padding-bottom:0px;
+  margin-bottom:1px;
+  margin-left:1px;
+}
+
+.piece .title:before{
+}
+
+.piece{
+  
+  
+  font-size:10px;
+  line-height:120%;
+  position:relative;
+  padding:0px;
+
+  float:left;
+  width:32%;
+  height:25px;
+
+  overflow:hidden;
+
+  /*font-family:'PixelMplus10-Regular';*/
+}
+.frame h2{
+  font-size:0.6em;
+  text-align:center;
+  background-color:#33a;
+  color:white;
+}
+
+.piece:nth-child(even){
+  background-color:#eee;
+}
+.piece:nth-child(odd){
+  background-color:#ccc;
+}
+
+.piece .title{
+}
+.piece .favicon{
+  width:10px;
+  height:auto;
+}
+
+.piece .bm{
+  float:right;
+  line-height:50%;
+}
+.piece .bm img{
+  height:8px;
+}
+
+.piece img{
+  max-height:45px;
+  width:auto;
+}
+
+.frame{
+  background-color:#ddd;
+  margin:1px;
+  padding:1px;
+  margin-bottom:5px;
+  /*
+  -webkit-column-count:3;
+  -webkit-column-gap:2px;
+  -webkit-column-rule: 1px solid black;
+  */
+
+  border:solid #333 2px;
+}
+
+.button{
+  background-color:#33f;
+  color:white;
+}
+
+.plusFrame{
+  background-color:white;
+  margin:1px;
+  padding:2px;
+  text-align:center;
+}
+.col2{
+  width:50%;
+  float:left;
+}
+
+.col3{
+  width:33%;
+  float:left;
+}
+.col4{
+  width:25%;
+  float:left;
+}
+
+
+
+.col6{
+  width:16%;
+  float:left;
+}
+
+.tar{
+  text-align:right;
+}
+.tac{
+  text-align:center;
+}
+
+.lfloat{
+  float:left;
+}
+.rfloat{
+  float:right;
+}
+
+
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
